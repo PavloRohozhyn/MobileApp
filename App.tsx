@@ -1,4 +1,4 @@
-import { View, StyleSheet } from 'react-native';
+import { View, ScrollView, StyleSheet } from 'react-native';
 
 import CardForPreview from './components/CardForPreview/CardForPreview';
 import CardTitle from './components/CardTitle/CardTitle';
@@ -7,13 +7,13 @@ import CardListItemIcon from './components/CardListItemIcon/CardListItemIcon';
 import CardListItem from './components/CardListItem/CardListItem';
 import CardListItemBtn from './components/CardListItemBtn/CardListItemBtn';
 import CardListItemCount from './components/CardListItemCount/CardListItemCount';
-import CardListItemSwitch from './components/CardListItemCountSwitcher/CardListItemCountSwitcher';
+import CardListItemSwitch from './components/CardListItemSwitch/CardListItemSwitch';
 import CardForDone from './components/CardForDone/CardForDone';
 
 export default function App() {
   return (
     <>
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <CardForPreview
           title="Словники"
           subTitle="Усі слова повинні належати словнику, словник повинен обєднувати якусь сутність, наприклад колір."
@@ -26,8 +26,8 @@ export default function App() {
         <CardListItemBtn title="Чорний" />
         <CardListItemCount title="Нових Слів" count="44" />
         <CardListItemSwitch title="Оновлювати Словники" data={true} />
-        <CardForDone title="" subTitle="" />
-      </View>
+        <CardForDone title="Вітаємо" subTitle="Ви завершили тренування" />
+      </ScrollView>
     </>
   );
 }
