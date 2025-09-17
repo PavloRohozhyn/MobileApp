@@ -2,10 +2,18 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ICardTitle from './types';
 
-const CardTitle = ({ title }: ICardTitle) => {
+const CardTitle = ({ title, position }: ICardTitle) => {
+  const getTextStyles = () => {
+    return {
+      textAlign: position ? 'center' : 'left',
+      fontSize: 24,
+      fontWeight: 800,
+    };
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={getTextStyles()}>{title}</Text>
     </View>
   );
 };
@@ -21,11 +29,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1, // for IOS
     shadowRadius: 4, // for IOS
     elevation: 3, // For Android shadow
-  },
-
-  title: {
-    fontSize: 24,
-    fontWeight: 800,
   },
 });
 

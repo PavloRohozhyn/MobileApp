@@ -12,7 +12,6 @@ const CardForPreview = ({
   const navigation = useNavigation();
 
   const pressHandler = () => {
-    console.log(screenTitle);
     if (!screenTitle) {
       return;
     }

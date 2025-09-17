@@ -2,13 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import CardForPreview from '../components/CardForPreview/CardForPreview';
 import data from '../data/data.json';
-import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = ({ navigation }) => {
   const [items, setItems] = useState([]);
-  const navigation1 = useNavigation();
-
-  console.log(navigation);
 
   useEffect(() => {
     if (data && data.main) {

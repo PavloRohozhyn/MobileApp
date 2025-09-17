@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Pressable, Text, Alert, StyleSheet } from 'react-native';
-import ICardListItemIcon from './types';
+import ICardListItemBtn from './types';
 
-const CardListItemBtn = ({ title }: ICardListItemIcon) => {
+const CardListItemBtn = ({ title }: ICardListItemBtn) => {
   return (
     <View style={styles.container}>
       <Pressable

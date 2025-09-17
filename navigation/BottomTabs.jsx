@@ -1,17 +1,15 @@
-import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AntDesign } from '@react-native-vector-icons/ant-design';
-
-import HomeScreen from '../screens/HomeScreen.jsx';
 import StatisticScreen from '../screens/StatisticScreen.jsx';
 import ProfileScreen from '../screens/ProfileScreen.jsx';
+
+import RootNavigator from './RootNavigator.jsx';
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabs = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: '#917F43',
@@ -19,7 +17,7 @@ const BottomTabs = () => {
     >
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={RootNavigator}
         options={{
           title: 'Дім',
           tabBarIcon: ({ size }) => {
