@@ -1,14 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import ICardForDone from './types';
 
 const CardForDone = ({ title, subTitle }: ICardForDone) => {
   return (
-    
-      <View style={styles.container}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.subTitle}>{subTitle}</Text>
-      </View>
+    <View style={styles.container}>
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.subTitle}>{subTitle}</Text>
+    </View>
   );
 };
 

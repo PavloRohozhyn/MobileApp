@@ -7,9 +7,9 @@ const Separator = () => {
 
 const styles = StyleSheet.create({
   lineStyle: {
-    borderWidth: 0.3,
-    borderColor: '#cac4d0',
     marginTop: 10,
+    borderWidth: 0.9,
+    borderColor: '#cac4d0',
   },
 });
 
