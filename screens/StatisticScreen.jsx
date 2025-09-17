@@ -1,24 +1,26 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-
+import { View, StyleSheet } from 'react-native';
+import CardTitle from '../components/CardTitle/CardTitle';
+import Separator from '../components/Separator/Separator';
+import CardListItemCount from '../components/CardListItemCount/CardListItemCount';
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Statistic</Text>
+    <View style={styles.screenContainer}>
+      <CardTitle title="Статистика" />
+      <Separator />
+      <CardListItemCount title="Нових Слів" count="0" />
+      <CardListItemCount title="Вивчено" count="0" />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  screenContainer: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  header: {
-    fontSize: 24,
-    marginBottom: 20,
+    paddingTop: 100,
+    gap: 20,
+    paddingHorizontal: '5%',
   },
 });
 

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { EvilIcons } from '@react-native-vector-icons/evil-icons';
 import { AntDesign } from '@react-native-vector-icons/ant-design';
 
 import HomeScreen from '../screens/HomeScreen.jsx';
@@ -15,6 +14,7 @@ const BottomTabs = () => {
       initialRouteName="Home"
       screenOptions={{
         headerShown: false,
+        tabBarActiveTintColor: '#917F43',
       }}
     >
       <Tab.Screen

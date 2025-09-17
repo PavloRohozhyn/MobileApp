@@ -1,25 +1,26 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import CardTitle from '../components/CardTitle/CardTitle';
+import Separator from '../components/Separator/Separator';
+import CardListItemSwitch from '../components/CardListItemSwitch/CardListItemSwitch';
 
-
-const HomeScreen = ({ navigation }) => {
+const ProfileScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Profile</Text>
+    <View style={styles.screenContainer}>
+      <CardTitle title="Профіль" />
+      <Separator />
+      <CardListItemSwitch title="Оновлювати Словники" data={false} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  screenContainer: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  header: {
-    fontSize: 24,
-    marginBottom: 20,
+    paddingTop: 100,
+    gap: 20,
+    paddingHorizontal: '5%',
   },
 });
 
-export default HomeScreen;
+export default ProfileScreen;

@@ -1,13 +1,29 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import ICardForPreview from './types';
+import { useNavigation } from '@react-navigation/native';
 
-const CardForPreview = ({ title, subTitle, linkTitle }: ICardForPreview) => {
+const CardForPreview = ({
+  title,
+  subTitle,
+  linkTitle,
+  screenTitle,
+}: ICardForPreview) => {
+  const navigation = useNavigation();
+
+  const pressHandler = () => {
+    console.log(screenTitle);
+    if (!screenTitle) {
+      return;
+    }
+    navigation.navigate(`${screenTitle}`);
+  };
+
   return (
     <View style={styles.cardContainer}>
       <Text style={styles.cardTitle}>{title}</Text>
       <Text style={styles.cardSubtitle}>{subTitle}</Text>
-      <Pressable>
+      <Pressable onPress={pressHandler}>
         <Text style={styles.cardLink}>{linkTitle}</Text>
       </Pressable>
     </View>
