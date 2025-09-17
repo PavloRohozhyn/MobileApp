@@ -39,19 +39,23 @@ const styles = StyleSheet.create({
   },
 
   cardTitle: {
+    paddingTop: 20,
     fontSize: 24,
     fontWeight: 800,
     marginHorizontal: '5%',
   },
 
   cardSubtitle: {
+    paddingTop: 20,
     fontSize: 14,
     marginHorizontal: '5%',
     color: '#666',
   },
 
   cardLink: {
-    padding: 10,
+    paddingTop: 20,
+    paddingBottom: 10,
+    marginHorizontal: '5%',
     color: '#917F43',
     fontWeight: 'bold',
     textAlign: 'right',
