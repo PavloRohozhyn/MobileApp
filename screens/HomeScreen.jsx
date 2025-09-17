@@ -15,12 +15,14 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {items &&
-        items.map(el => (
-          <CardForPreview
-            title={el.title}
-            subTitle={el.subtitle}
-            linkTitle={el.link}
-          />
+        items.map((el, i) => (
+          <View key={i}>
+            <CardForPreview
+              title={el.title}
+              subTitle={el.subtitle}
+              linkTitle={el.link}
+            />
+          </View>
         ))}
     </View>
   );

@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import { EvilIcons } from '@react-native-vector-icons/evil-icons';
+import { AntDesign } from '@react-native-vector-icons/ant-design';
+
 import HomeScreen from '../screens/HomeScreen.jsx';
 import StatisticScreen from '../screens/StatisticScreen.jsx';
 import ProfileScreen from '../screens/ProfileScreen.jsx';
@@ -11,34 +13,39 @@ const BottomTabs = () => {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      tabBarOptions={{
-        activeTintColor: 'tomato',
-        inactiveTintColor: 'gray',
+      screenOptions={{
+        headerShown: false,
       }}
     >
       <Tab.Screen
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Home',
-          tabBarIcon: ({ focused, color, size }) => (
-            <Ionicons
-              name={focused ? 'home' : 'home-outline'}
-              size={size}
-              color={color}
-            />
-          ),
+          title: 'Дім',
+          tabBarIcon: ({ size }) => {
+            return <AntDesign name="star" size={size} />;
+          },
         }}
       />
       <Tab.Screen
         name="Statistic"
         component={StatisticScreen}
-        options={{ title: 'Statistic' }}
+        options={{
+          title: 'Статистика',
+          tabBarIcon: ({ size }) => {
+            return <AntDesign name="line-chart" size={size} />;
+          },
+        }}
       />
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
-        options={{ title: 'Profile' }}
+        options={{
+          title: 'Профіль',
+          tabBarIcon: ({ size }) => {
+            return <AntDesign name="user" size={size} />;
+          },
+        }}
       />
     </Tab.Navigator>
   );
