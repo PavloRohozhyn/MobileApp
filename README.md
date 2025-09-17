@@ -1,6 +1,7 @@
 ## Video for Hometask 7
 
 ![](./task-7.mkv)
+<video src="./task-7.mkv" controls preload></video>
 
 
 
