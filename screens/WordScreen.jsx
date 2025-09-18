@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import CardTitle from '../components/CardTitle/CardTitle';
 import Separator from '../components/Separator/Separator';
 import CardListItem from '../components/CardListItem/CardListItem';
+import { getListOfWordsByDictId } from '../services/api';
 
 const WordScreen = ({ navigation }) => {
+  const [words, setWords] = useState([]);
+
+  // get list of dictionare
+  useEffect(dictId => {
+    const fetchWords = async dictId => {
+      try {
+        const { data } = await getListOfWordsByDictId(dictId);
+        setWords(data.data);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetchWords(dictId);
+  }, []);
+
   const pressHandler = () => {
-    if (false) {
-      return;
-    }
     navigation.navigate('TaskOneScreen');
   };
 
@@ -19,10 +32,14 @@ const WordScreen = ({ navigation }) => {
       <Pressable onPress={pressHandler}>
         <Text style={styles.cardLink}>Тренувати</Text>
       </Pressable>
-      <CardListItem title="Red" subTitle="Червоний" />
-      <CardListItem title="Black" subTitle="Чорний" />
-      <CardListItem title="Green" subTitle="Зелений" />
-      <CardListItem title="Blue" subTitle="Синій" />
+
+      {words && words.length > 0 ? (
+        words.map((el, idx) => (
+          <CardListItem title={el.title} subTitle={el.subTitle} />
+        ))
+      ) : (
+        <Text style={styles.noData}>Нажаль немає словників</Text>
+      )}
     </View>
   );
 };
