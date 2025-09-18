@@ -1,14 +1,30 @@
-import React from 'react';
-import { View, Pressable, StyleSheet } from 'react-native';
+import { useState, useEffect } from 'react';
+import { View, Text, Pressable, StyleSheet } from 'react-native';
+
 import CardTitle from '../components/CardTitle/CardTitle';
 import Separator from '../components/Separator/Separator';
 import CardListItemIcon from '../components/CardListItemIcon/CardListItemIcon';
 
-const HomeScreen = ({ navigation }) => {
+import getListOfDictionaries from '../services/api';
+
+const DictionaryScreen = ({ navigation }) => {
+  const [dict, setDict] = useState([]);
+
+  // get list of dictionare
+  useEffect(() => {
+    const fetchDict = async () => {
+      try {
+        const data = await getListOfDictionaries();
+        setDict(data);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetchDict();
+  }, []);
+
+  // navigation handler
   const pressHandler = () => {
-    if (false) {
-      return;
-    }
     navigation.navigate('Word');
   };
 
@@ -16,9 +32,15 @@ const HomeScreen = ({ navigation }) => {
     <View style={styles.screenContainer}>
       <CardTitle title="Словники" />
       <Separator />
-      <Pressable onPress={pressHandler}>
-        <CardListItemIcon title="Colors" />
-      </Pressable>
+      {dict && dict.length > 0 ? (
+        dict.map((el, idx) => (
+          <Pressable key={idx} onPress={pressHandler}>
+            <CardListItemIcon title={el.title} />
+          </Pressable>
+        ))
+      ) : (
+        <Text>Нажаль немає словників</Text>
+      )}
     </View>
   );
 };
@@ -32,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default DictionaryScreen;
