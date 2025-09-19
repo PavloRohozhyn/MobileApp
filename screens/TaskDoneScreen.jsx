@@ -2,7 +2,7 @@ import { View, Text, Pressable, StyleSheet } from 'react-native';
 
 import CardForDone from '../components/CardForDone/CardForDone';
 
-const DoneScreen = ({ navigation }) => {
+const TaskDoneScreen = ({ navigation }) => {
   const pressHandler = () => {
     if (false) {
       return;
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DoneScreen;
+export default TaskDoneScreen;

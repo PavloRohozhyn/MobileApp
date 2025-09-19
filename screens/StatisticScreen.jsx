@@ -4,7 +4,7 @@ import CardTitle from '../components/CardTitle/CardTitle';
 import Separator from '../components/Separator/Separator';
 import CardListItemCount from '../components/CardListItemCount/CardListItemCount';
 
-const HomeScreen = ({ navigation }) => {
+const StatisticScreen = ({ navigation }) => {
   return (
     <View style={styles.screenContainer}>
       <CardTitle title="Статистика" />
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default StatisticScreen;

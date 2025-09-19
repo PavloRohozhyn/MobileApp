@@ -16,7 +16,7 @@ const BottomTabs = () => {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name="Root"
         component={RootNavigator}
         options={{
           title: 'Дім',

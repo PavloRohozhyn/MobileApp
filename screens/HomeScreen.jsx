@@ -1,21 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import CardForPreview from '../components/CardForPreview/CardForPreview';
-import data from '../data/data.json';
+import { getDataForMainScreen } from '../services/api.ts';
 
-const HomeScreen = ({ navigation }) => {
-  const [items, setItems] = useState([]);
+const HomeScreen = () => {
+  const [result, setResult] = useState([]);
 
+  // get list of dictionare
   useEffect(() => {
-    if (data && data.main) {
-      setItems(data.main); // Set the imported JSON data to state
-    }
+    const fetchHomeData = async () => {
+      try {
+        const { data } = await getDataForMainScreen();
+        setResult(data.data);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetchHomeData();
   }, []);
 
   return (
     <View style={styles.container}>
-      {items &&
-        items.map((el, i) => (
+      {result && result.length > 0 ? (
+        result.map((el, i) => (
           <View key={i}>
             <CardForPreview
               title={el.title}
@@ -24,7 +31,10 @@ const HomeScreen = ({ navigation }) => {
               screenTitle={el.screenTitle}
             />
           </View>
-        ))}
+        ))
+      ) : (
+        <Text style={styles.noData}>Нажаль технічні негаразди</Text>
+      )}
     </View>
   );
 };
@@ -36,6 +46,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 20,
     paddingHorizontal: '5%',
+  },
+  noData: {
+    textAlign: 'center',
   },
 });
 
