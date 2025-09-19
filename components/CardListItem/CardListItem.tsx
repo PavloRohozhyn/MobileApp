@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     fontWeight: 500,
     letterSpacing: 0.03,
     color: '#1d1b20',
+    textTransform: 'capitalize',
   },
 
   subTitle: {
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
     fontWeight: 400,
     letterSpacing: 0.02,
     color: '#49454f',
+    textTransform: 'capitalize',
   },
 });
 

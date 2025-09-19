@@ -16,7 +16,7 @@ const api = axios.create({
  * Request
  */
 api.interceptors.request.use(request => {
-  console.log('Starting Request', JSON.stringify(request, null, 2));
+  // console.log('Starting Request', JSON.stringify(request, null, 2));
   return request;
 });
 
@@ -24,7 +24,7 @@ api.interceptors.request.use(request => {
  * Response
  */
 api.interceptors.response.use(response => {
-  console.log('Response:', JSON.stringify(response, null, 2));
+  // console.log('Response:', JSON.stringify(response, null, 2));
   return response;
 });
 
@@ -48,7 +48,17 @@ export const getListOfDictionaries = async () => {
 /**
  * get list of words
  */
-export const getListOfWordsByDictId = async () => {
-  return await api.get('/words-by-dictionary-id.json');
+export const getListOfWordsByDictId = async dictId => {
+  const words = await api.get('/words-by-dictionary-id.json');
+  let res = [];
+  // console.log('dictionary', dictId);
+  // console.log('words before', words.data);
+  if (words.data.data && words.data.data.length > 0) {
+    // console.log('words before 1', words.data.data);
+    res = words.data.data.filter(el => el.dict_id == dictId);
+    // console.log('word result', res);
+    return res;
+  }
+
+  return res;
 };
-getListOfWordsByDictId;

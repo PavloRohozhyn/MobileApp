@@ -23,21 +23,16 @@ const DictionaryScreen = ({ navigation }) => {
     fetchDict();
   }, []);
 
-  // navigation handler
-  const pressHandler = dictId => {
-    if (!dictId) {
-      return false;
-    }
-    navigation.navigate('Word', { dictId: `${dictId}` });
-  };
-
   return (
     <View style={styles.screenContainer}>
       <CardTitle title="Словники" />
       <Separator />
       {dict && dict.length > 0 ? (
         dict.map((el, idx) => (
-          <Pressable key={idx} onPress={pressHandler(el.id)}>
+          <Pressable
+            key={idx}
+            onPress={() => navigation.navigate('Word', { dictId: `${el.id}` })}
+          >
             <CardListItemIcon title={el.title} />
           </Pressable>
         ))

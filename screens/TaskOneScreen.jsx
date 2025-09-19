@@ -1,13 +1,31 @@
+import { useState, useEffect } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import CardTitle from '../components/CardTitle/CardTitle';
 import CardListItemBtn from '../components/CardListItemBtn/CardListItemBtn';
 
-const TaskOneScreen = ({ navigation }) => {
+import { getListOfWordsByDictId } from '../services/api';
+
+const TaskOneScreen = ({ route, navigation }) => {
+  const [words, setWords] = useState();
+
+  // get list of dictionare
+  useEffect(() => {
+    const fetchWords = async () => {
+      try {
+        const { dictId } = route.params;
+        const result = await getListOfWordsByDictId(dictId);
+        // console.log(result);
+        setWords(result);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetchWords();
+  }, []);
+
   const pressHandler = () => {
-    if (false) {
-      return;
-    }
-    navigation.navigate('TaskTwoScreen');
+    const { dictId } = route.params;
+    navigation.navigate('TaskTwoScreen', { dictId: `${dictId}` });
   };
 
   return (
