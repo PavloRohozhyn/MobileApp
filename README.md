@@ -1,7 +1,10 @@
+## Video for Hometask 8
+
+![task-8.mp4](./task-8.mp4)
+
 ## Video for Hometask 7
 
 ![task-7.mp4](./task-7.mp4)
-<video src="./task-7.mp4" controls preload>task-7.mp4</video>
 
 ## Screenshot for Hometask 6
 
