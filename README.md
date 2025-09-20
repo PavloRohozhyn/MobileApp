@@ -1,3 +1,22 @@
+### Task 1,2,3
+
+> MobileApp Design
+<a href="https://travel-trucks-three-wheat.vercel.app" target="_blank"><img src="./travel-tracks.png" width="200" height="130" align="right"/></a>
+<br />
+- Source [Figma](https://www.figma.com/design/XOru91f7Rb9IJSghXYV9Vs/-Rohozhyn-_cross_assignment_2?node-id=0-1&t=pkdzfBOUOHM6gOXa-1)
+<br />
+<br />
+
+
+### Task 1,2,3
+
+> MobileApp Design
+<a href="https://travel-trucks-three-wheat.vercel.app" target="_blank"><img src="./travel-tracks.png" width="200" height="130" align="right"/></a>
+<br />
+- Source [GitHub Repo](https://github.com/PavloRohozhyn/TravelTrucks)
+<br />
+<br />
+
 ## Video for Hometask 8
 
 ![task-8.mp4](./task-8.mp4)
@@ -8,7 +27,7 @@
 
 ## Screenshot for Hometask 6
 
- ![task1](./task1.jpg)
+![task1](./task1.jpg)
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
@@ -73,4 +92,3 @@ yarn ios
 If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
 
 This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
