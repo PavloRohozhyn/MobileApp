@@ -2,8 +2,9 @@
 
 > MobileApp Design
 > <img src="./readme/cross_assignment_1/cross_assigment_1.png" width="200" height="130" align="right"/>
+
 <br />
-<a href="./readme/cross_assignment_1/cross_assigment_1.fig">cross_assigment_1.fig</a>
+Figma design file <a href="./readme/cross_assignment_1/cross_assigment_1.fig">cross_assigment_1.fig</a>
 <br />
 <br />
 
@@ -11,55 +12,40 @@
 
 > MobileApp Design
 > <img src="./readme/cross_assignment_2/cross_assigment_2.png" width="200" height="130" align="right"/>
+
 <br />
-<a href="./readme/cross_assignment_2/cross_assigment_2.fig">cross_assigment_2.fig</a>
+Figma design file <a href="./readme/cross_assignment_2/cross_assigment_2.fig">cross_assigment_2.fig</a>
 <br />
 <br />
 
 ### Cross Assigment 3
 > Components
-> <img src="./readme/cross_assignment_3/cross_assigment_3.jpg" width="100" height="200" align="right"/><br />
-- Source branch [cross_assignment_3](https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_3)
+> <img src="./readme/cross_assignment_3/cross_assignment_3.jpg" width="50" height="100" align="right"/><br />
+
+<br />
+Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_3">cross_assignment_3</a>
 <br />
 <br />
 
-### Cross Assigment 3
-
+### Cross Assigment 4
 > Navigation
-> <a href="https://travel-trucks-three-wheat.vercel.app" target="_blank"><img src="./travel-tracks.png" width="200" height="130" align="right"/></a>
-<br />
-- Source [GitHub Repo](https://github.com/PavloRohozhyn/TravelTrucks)
-<br />
-<br />
+> <img src="./readme/cross_assignment_4/cross_assingment_4.png" width="200" height="130" align="right"/><br />
 
-### Cross Assigment 2
-
-> Api calls
-> <a href="https://travel-trucks-three-wheat.vercel.app" target="_blank"><img src="./travel-tracks.png" width="200" height="130" align="right"/></a>
 <br />
-- Source [GitHub Repo](https://github.com/PavloRohozhyn/TravelTrucks)
+- Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_4">cross_assignment_4</a>
+- <a href="https://vimeo.com/1120356077">Live Demo</a>
 <br />
 <br />
 
-## Video for Hometask 8
+### Cross Assigment 5
+> API Calls
+> <img src="./readme/cross_assignment_5/cross_assignment_5.png" width="200" height="130" align="right"/><br />
 
-![task-8.mp4](./task-8.mp4)
-
-## Video for Hometask 7
-[./task-7.mp4](https://vimeo.com/1120356077)
-
-[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://vimeo.com/1120356077)
-
-
-
-
-![task-7.mp4](./task-7.mp4)
-
-## Screenshot for Hometask 6
-
-![task1](./task1.jpg)
-
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<br />
+- Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_5">cross_assignment_5</a>
+- <a href="https://vimeo.com/1120356068">Live Demo</a>
+<br />
+<br />
 
 # Getting Started
 
