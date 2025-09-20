@@ -1,17 +1,16 @@
 ### Task 1,2,3
 
 > MobileApp Design
-<a href="https://travel-trucks-three-wheat.vercel.app" target="_blank"><img src="./travel-tracks.png" width="200" height="130" align="right"/></a>
+> <img src="./readme/cross_assignment_1/cross_assigment_1.png" width="200" height="130" align="right"/>
 <br />
-- Source [Figma](https://www.figma.com/design/XOru91f7Rb9IJSghXYV9Vs/-Rohozhyn-_cross_assignment_2?node-id=0-1&t=pkdzfBOUOHM6gOXa-1)
+<a href="./readme/cross_assignment_1/cross_assigment_1.fig">cross_assigment_1.fig</a>
 <br />
 <br />
 
-
-### Task 1,2,3
+### Task 4
 
 > MobileApp Design
-<a href="https://travel-trucks-three-wheat.vercel.app" target="_blank"><img src="./travel-tracks.png" width="200" height="130" align="right"/></a>
+> <a href="https://travel-trucks-three-wheat.vercel.app" target="_blank"><img src="./travel-tracks.png" width="200" height="130" align="right"/></a>
 <br />
 - Source [GitHub Repo](https://github.com/PavloRohozhyn/TravelTrucks)
 <br />
