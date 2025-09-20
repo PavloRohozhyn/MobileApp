@@ -11,7 +11,7 @@ Figma design file <a href="./readme/cross_assignment_1/cross_assigment_1.fig">cr
 ### Cross Assigment 2
 
 > MobileApp Design
-> <img src="./readme/cross_assignment_2/cross_assigment_2.png" width="200" height="130" align="right"/>
+> <img src="./readme/cross_assignment_2/cross_assignment_2.png" width="200" height="130" align="right"/>
 
 <br />
 Figma design file <a href="./readme/cross_assignment_2/cross_assigment_2.fig">cross_assigment_2.fig</a>
@@ -29,7 +29,7 @@ Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_ass
 
 ### Cross Assigment 4
 > Navigation
-> <img src="./readme/cross_assignment_4/cross_assingment_4.png" width="200" height="130" align="right"/><br />
+> <img src="./readme/cross_assignment_4/cross_assignment_4.png" width="200" height="130" align="right"/><br />
 
 <br />
 - Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_4">cross_assignment_4</a>
