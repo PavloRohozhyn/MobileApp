@@ -22,6 +22,12 @@
 ![task-8.mp4](./task-8.mp4)
 
 ## Video for Hometask 7
+[./task-7.mp4](https://vimeo.com/1120356077)
+
+[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://vimeo.com/1120356077)
+
+
+
 
 ![task-7.mp4](./task-7.mp4)
 
