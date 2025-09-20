@@ -18,7 +18,7 @@
 
 ### Cross Assigment 3
 > Components
-> <img src="./readme/cross_assignment_3/cross_assigment_3.jpg" width="200" height="130" align="right"/><br />
+> <img src="./readme/cross_assignment_3/cross_assigment_3.jpg" width="100" height="200" align="right"/><br />
 - Source branch [cross_assignment_3](https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_3)
 <br />
 <br />
