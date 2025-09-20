@@ -2,7 +2,6 @@
 
 > MobileApp Design
 > <img src="./readme/cross_assignment_1/cross_assigment_1.png" width="200" height="130" align="right"/>
-
 <br />
 Figma design file <a href="./readme/cross_assignment_1/cross_assigment_1.fig">cross_assigment_1.fig</a>
 <br />
@@ -12,7 +11,6 @@ Figma design file <a href="./readme/cross_assignment_1/cross_assigment_1.fig">cr
 
 > MobileApp Design
 > <img src="./readme/cross_assignment_2/cross_assignment_2.png" width="200" height="130" align="right"/>
-
 <br />
 Figma design file <a href="./readme/cross_assignment_2/cross_assigment_2.fig">cross_assigment_2.fig</a>
 <br />
@@ -21,7 +19,6 @@ Figma design file <a href="./readme/cross_assignment_2/cross_assigment_2.fig">cr
 ### Cross Assigment 3
 > Components
 > <img src="./readme/cross_assignment_3/cross_assignment_3.jpg" width="50" height="100" align="right"/><br />
-
 <br />
 Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_3">cross_assignment_3</a>
 <br />
@@ -30,25 +27,22 @@ Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_ass
 ### Cross Assigment 4
 > Navigation
 > <img src="./readme/cross_assignment_4/cross_assignment_4.png" width="200" height="130" align="right"/><br />
-
 <br />
-- Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_4">cross_assignment_4</a>
-- <a href="https://vimeo.com/1120356077">Live Demo</a>
+Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_4">cross_assignment_4</a><br />
+<a href="https://vimeo.com/1120356077">Live Demo</a>
 <br />
 <br />
 
 ### Cross Assigment 5
 > API Calls
 > <img src="./readme/cross_assignment_5/cross_assignment_5.png" width="200" height="130" align="right"/><br />
-
 <br />
-- Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_5">cross_assignment_5</a>
-- <a href="https://vimeo.com/1120356068">Live Demo</a>
+Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_5">cross_assignment_5</a><br />
+<a href="https://vimeo.com/1120356068">Live Demo</a>
 <br />
 <br />
 
-# Getting Started
-
+## Project Config
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
 ## Step 1: Start Metro
