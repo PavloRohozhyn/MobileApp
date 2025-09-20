@@ -3,7 +3,7 @@
 > MobileApp Design
 > <img src="./readme/cross_assignment_1/cross_assigment_1.png" width="200" height="130" align="right"/>
 <br />
-Figma design file <a href="./readme/cross_assignment_1/cross_assigment_1.fig">cross_assigment_1.fig</a>
+:paperclip: Figma design file <a href="./readme/cross_assignment_1/cross_assigment_1.fig">cross_assigment_1.fig</a>
 <br />
 <br />
 
@@ -12,7 +12,7 @@ Figma design file <a href="./readme/cross_assignment_1/cross_assigment_1.fig">cr
 > MobileApp Design
 > <img src="./readme/cross_assignment_2/cross_assignment_2.png" width="200" height="130" align="right"/>
 <br />
-Figma design file <a href="./readme/cross_assignment_2/cross_assigment_2.fig">cross_assigment_2.fig</a>
+:paperclip: Figma design file <a href="./readme/cross_assignment_2/cross_assigment_2.fig">cross_assigment_2.fig</a>
 <br />
 <br />
 
@@ -20,7 +20,7 @@ Figma design file <a href="./readme/cross_assignment_2/cross_assigment_2.fig">cr
 > Components
 > <img src="./readme/cross_assignment_3/cross_assignment_3.jpg" width="50" height="100" align="right"/><br />
 <br />
-Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_3">cross_assignment_3</a>
+:paperclip: Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_3">cross_assignment_3</a>
 <br />
 <br />
 
@@ -28,8 +28,8 @@ Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_ass
 > Navigation
 > <img src="./readme/cross_assignment_4/cross_assignment_4.png" width="200" height="130" align="right"/><br />
 <br />
-Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_4">cross_assignment_4</a><br />
-<a href="https://vimeo.com/1120356077">Live Demo</a>
+:paperclip: Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_4">cross_assignment_4</a><br />
+:paperclip: <a href="https://vimeo.com/1120356077">Live Demo</a>
 <br />
 <br />
 
@@ -37,8 +37,8 @@ Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_ass
 > API Calls
 > <img src="./readme/cross_assignment_5/cross_assignment_5.png" width="200" height="130" align="right"/><br />
 <br />
-Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_5">cross_assignment_5</a><br />
-<a href="https://vimeo.com/1120356068">Live Demo</a>
+:paperclip: Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_5">cross_assignment_5</a><br />
+:paperclip: <a href="https://vimeo.com/1120356068">Live Demo</a>
 <br />
 <br />
 
