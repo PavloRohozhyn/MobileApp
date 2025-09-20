@@ -1,4 +1,4 @@
-### Task 1,2,3
+### Cross Assigment 1
 
 > MobileApp Design
 > <img src="./readme/cross_assignment_1/cross_assigment_1.png" width="200" height="130" align="right"/>
@@ -7,9 +7,34 @@
 <br />
 <br />
 
-### Task 4
+### Cross Assigment 2
 
 > MobileApp Design
+> <img src="./readme/cross_assignment_2/cross_assigment_2.png" width="200" height="130" align="right"/>
+<br />
+<a href="./readme/cross_assignment_2/cross_assigment_2.fig">cross_assigment_2.fig</a>
+<br />
+<br />
+
+### Cross Assigment 3
+> Components
+> <img src="./readme/cross_assignment_3/cross_assigment_3.jpg" width="200" height="130" align="right"/><br />
+- Source branch [cross_assignment_3](https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_3)
+<br />
+<br />
+
+### Cross Assigment 3
+
+> Navigation
+> <a href="https://travel-trucks-three-wheat.vercel.app" target="_blank"><img src="./travel-tracks.png" width="200" height="130" align="right"/></a>
+<br />
+- Source [GitHub Repo](https://github.com/PavloRohozhyn/TravelTrucks)
+<br />
+<br />
+
+### Cross Assigment 2
+
+> Api calls
 > <a href="https://travel-trucks-three-wheat.vercel.app" target="_blank"><img src="./travel-tracks.png" width="200" height="130" align="right"/></a>
 <br />
 - Source [GitHub Repo](https://github.com/PavloRohozhyn/TravelTrucks)
