@@ -4,10 +4,12 @@ import ICardListItemIcon from './types';
 
 const CardListItemIcon = ({ title }: ICardListItemIcon) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.icon} />
-      <Text style={styles.title}>{title}</Text>
-    </View>
+    <>
+      <View style={styles.container}>
+        <View style={styles.icon} />
+        <Text style={styles.title}>{title}</Text>
+      </View>
+    </>
   );
 };
 

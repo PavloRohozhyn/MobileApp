@@ -1,27 +1,28 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { dictionaryList } from './../redux/dictionary/operations';
+import { setSelectedDictionaryId } from './../redux/dictionary/slice';
+
 import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { useSelector } from 'react-redux';
+import { selectAllDictionary } from './../redux/dictionary/selectors';
 
 import CardTitle from '../components/CardTitle/CardTitle';
 import Separator from '../components/Separator/Separator';
 import CardListItemIcon from '../components/CardListItemIcon/CardListItemIcon';
 
-import { getListOfDictionaries } from '../services/api';
-
 const DictionaryScreen = ({ navigation }) => {
-  const [dict, setDict] = useState([]);
-
-  // get list of dictionare
+  const dispatch = useDispatch();
   useEffect(() => {
-    const fetchDict = async () => {
-      try {
-        const { data } = await getListOfDictionaries();
-        setDict(data.data);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetchDict();
-  }, []);
+    dispatch(dictionaryList());
+  }, [dispatch]);
+
+  function handleDictionaryClick(dictId) {
+    dispatch(setSelectedDictionaryId(dictId));
+    navigation.navigate('Word');
+  }
+
+  const dict = useSelector(selectAllDictionary);
 
   return (
     <View style={styles.screenContainer}>
@@ -29,10 +30,7 @@ const DictionaryScreen = ({ navigation }) => {
       <Separator />
       {dict && dict.length > 0 ? (
         dict.map((el, idx) => (
-          <Pressable
-            key={idx}
-            onPress={() => navigation.navigate('Word', { dictId: `${el.id}` })}
-          >
+          <Pressable key={idx} onPress={() => handleDictionaryClick(el.id)}>
             <CardListItemIcon title={el.title} />
           </Pressable>
         ))
