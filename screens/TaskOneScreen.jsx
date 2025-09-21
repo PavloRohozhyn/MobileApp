@@ -1,31 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { selectAllWord } from './../redux/word/selectors';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import CardTitle from '../components/CardTitle/CardTitle';
 import CardListItemBtn from '../components/CardListItemBtn/CardListItemBtn';
 
-import { getListOfWordsByDictId } from '../services/api';
-
-const TaskOneScreen = ({ route, navigation }) => {
-  const [words, setWords] = useState();
-
-  // get list of dictionare
-  useEffect(() => {
-    const fetchWords = async () => {
-      try {
-        const { dictId } = route.params;
-        const result = await getListOfWordsByDictId(dictId);
-        // console.log(result);
-        setWords(result);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetchWords();
-  }, []);
+const TaskOneScreen = ({ navigation }) => {
+  const words = useSelector(selectAllWord);
 
   const pressHandler = () => {
-    const { dictId } = route.params;
-    navigation.navigate('TaskTwoScreen', { dictId: `${dictId}` });
+    navigation.navigate('TaskTwoScreen');
   };
 
   return (
@@ -34,10 +17,11 @@ const TaskOneScreen = ({ route, navigation }) => {
       <Pressable onPress={pressHandler}>
         <Text style={styles.cardLink}>Наступне Тренування</Text>
       </Pressable>
-      <CardListItemBtn title="Червоний" />
-      <CardListItemBtn title="Зелений" />
-      <CardListItemBtn title="Синій" />
-      <CardListItemBtn title="Чорний" />
+      {words && words.length > 0 ? (
+        words.map((el, idx) => <CardListItemBtn key={idx} title={el.trans} />)
+      ) : (
+        <Text style={styles.noData}>Нажаль немає слів</Text>
+      )}
     </View>
   );
 };

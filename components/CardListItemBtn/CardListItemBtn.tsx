@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   customButtonText: {
     fontSize: 16,
     fontWeight: 'bold',
+    textTransform: 'capitalize',
   },
 });
 

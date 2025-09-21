@@ -1,31 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
+import { wordList } from './../redux/word/operations';
+import {
+  selectSelectedDictionaryId,
+  selectAllWord,
+} from './../redux/word/selectors';
+
 import CardTitle from '../components/CardTitle/CardTitle';
 import Separator from '../components/Separator/Separator';
 import CardListItem from '../components/CardListItem/CardListItem';
-import { getListOfWordsByDictId } from '../services/api';
 
-const WordScreen = ({ route, navigation }) => {
-  const [words, setWords] = useState([]);
-
-  // get list of dictionare
-  useEffect(dictId => {
-    const fetchWords = async () => {
-      try {
-        const { dictId } = route.params;
-        const result = await getListOfWordsByDictId(dictId);
-        // console.log(result);
-        setWords(result);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetchWords();
-  }, []);
+const WordScreen = ({ navigation }) => {
+  // Get dictionary id
+  const dictId = useSelector(selectSelectedDictionaryId);
+  // get all words (function runs in redux)
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(wordList(dictId));
+  }, [dispatch]);
+  // get functions result from redux
+  const words = useSelector(selectAllWord);
 
   const pressHandler1 = () => {
-    const { dictId } = route.params;
-    navigation.navigate('TaskOneScreen', { dictId: `${dictId}` });
+    navigation.navigate('TaskOneScreen');
   };
 
   return (

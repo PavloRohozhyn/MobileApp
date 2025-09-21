@@ -1,12 +1,13 @@
+import { useSelector } from 'react-redux';
+import { selectAllWord } from './../redux/word/selectors';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import CardTitle from '../components/CardTitle/CardTitle';
 import CardListItemBtn from '../components/CardListItemBtn/CardListItemBtn';
 
 const TaskTwoScreen = ({ navigation }) => {
+  const words = useSelector(selectAllWord);
+
   const pressHandler = () => {
-    if (false) {
-      return;
-    }
     navigation.navigate('TaskDoneScreen');
   };
 
@@ -16,10 +17,12 @@ const TaskTwoScreen = ({ navigation }) => {
       <Pressable onPress={pressHandler}>
         <Text style={styles.cardLink}>Наступне Тренування</Text>
       </Pressable>
-      <CardListItemBtn title="Green" />
-      <CardListItemBtn title="Blue" />
-      <CardListItemBtn title="Black" />
-      <CardListItemBtn title="Red" />
+
+      {words && words.length > 0 ? (
+        words.map((el, idx) => <CardListItemBtn key={idx} title={el.word} />)
+      ) : (
+        <Text style={styles.noData}>Нажаль немає слів</Text>
+      )}
     </View>
   );
 };
