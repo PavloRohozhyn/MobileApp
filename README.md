@@ -42,6 +42,18 @@
 <br />
 <br />
 
+
+### Cross Assigment 6
+> Context APi & Redux Toolkit
+> <img src="./readme/cross_assignment_6/main.png" width="200" height="130" align="right"/><br />
+<br />
+:paperclip: Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_6">cross_assignment_6</a><br />
+:paperclip: <a href="./readme/cross_assignment_6/theme.png">ScreenShot - Theme (Contex API)</a><br />
+:paperclip: <a href="./readme/cross_assignment_6/redux.png">ScreenShot - State Manager (Redux Toolkit)</a><br />
+:paperclip: <a href="./readme/cross_assignment_6/main.png">ScreenShot - implementing App.js</a><br />
+<br />
+<br />
+
 ### Project Config
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
