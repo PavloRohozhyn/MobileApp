@@ -61,7 +61,8 @@
 ### Cross Assigment 7
 
 > Animation & Perfomance Optimizathion
-> <img src="./readme/cross_assignment_7/main.png" width="200" height="130" align="right"/><br />
+> <img src="./readme/cross_assignment_7/main.png" width="200" height="130" align="right"/>
+<br />
 :paperclip: Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_assignment_7">cross_assignment_7</a><br />
 :paperclip: <a href="https://vimeo.com/1120810364">Live Demo</a></br />
 </br />
