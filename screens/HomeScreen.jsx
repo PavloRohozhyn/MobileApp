@@ -1,24 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectData } from './../redux/home/selectors';
+import { getHomeData } from './../redux/home/operations';
 import { View, Text, StyleSheet } from 'react-native';
 import CardForPreview from '../components/CardForPreview/CardForPreview';
-import { getDataForMainScreen } from '../services/api.ts';
 
 const HomeScreen = () => {
-  const [result, setResult] = useState([]);
-
-  // get list of dictionare
+  const dispatch = useDispatch();
   useEffect(() => {
-    const fetchHomeData = async () => {
-      try {
-        const { data } = await getDataForMainScreen();
-        setResult(data.data);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetchHomeData();
-  }, []);
-
+    dispatch(getHomeData());
+  }, [dispatch]);
+  const result = useSelector(selectData);
   return (
     <View style={styles.container}>
       {result && result.length > 0 ? (

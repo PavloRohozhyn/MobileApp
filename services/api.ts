@@ -29,11 +29,3 @@ api.interceptors.response.use(response => {
 });
 
 export default api;
-
-/**
- * Get data for Main Screen
- * @returns array
- */
-export const getDataForMainScreen = async () => {
-  return await api.get('/main-screen.json');
-};
