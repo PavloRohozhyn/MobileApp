@@ -8,6 +8,7 @@ const CardTitle = ({ title, position }: ICardTitle) => {
       textAlign: position ? 'center' : 'left',
       fontSize: 24,
       fontWeight: 800,
+      textTransform: 'capitalize',
     };
   };
 

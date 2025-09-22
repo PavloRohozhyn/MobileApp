@@ -2,14 +2,14 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ICardListItem from './types';
 
-const CardListItem = ({ title, subTitle }: ICardListItem) => {
+const CardListItem = React.memo(({ title, subTitle }: ICardListItem) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.subTitle}>{subTitle}</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {

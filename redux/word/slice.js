@@ -14,6 +14,8 @@ const wordSlice = createSlice({
   name: 'word',
   initialState: {
     data: [],
+    words: [],
+    index: 0,
     isLoading: false,
     error: null,
   },
