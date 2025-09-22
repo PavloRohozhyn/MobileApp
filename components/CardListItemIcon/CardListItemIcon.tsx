@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ICardListItemIcon from './types';
 
-const CardListItemIcon = ({ title }: ICardListItemIcon) => {
+const CardListItemIcon = React.memo(({ title }: ICardListItemIcon) => {
   return (
     <>
       <View style={styles.container}>
@@ -11,7 +11,7 @@ const CardListItemIcon = ({ title }: ICardListItemIcon) => {
       </View>
     </>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {

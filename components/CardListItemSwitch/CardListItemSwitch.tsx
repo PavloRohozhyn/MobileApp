@@ -2,24 +2,26 @@ import React, { useState } from 'react';
 import { View, Text, Switch, StyleSheet } from 'react-native';
 import ICardListItemSwitch from './types';
 
-const CardListItemSwitch = ({ title, data }: ICardListItemSwitch) => {
-  const [isEnabled, setIsEnabled] = useState(data);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+const CardListItemSwitch = React.memo(
+  ({ title, data }: ICardListItemSwitch) => {
+    const [isEnabled, setIsEnabled] = useState(data);
+    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
-      <Switch
-        style={styles.data}
-        trackColor={{ false: '#6750a4', true: '#f4f3f4' }}
-        thumbColor={isEnabled ? '#f4f3f4' : '#f4f3f4'}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
-        value={isEnabled}
-      />
-    </View>
-  );
-};
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>{title}</Text>
+        <Switch
+          style={styles.data}
+          trackColor={{ false: '#6750a4', true: '#f4f3f4' }}
+          thumbColor={isEnabled ? '#f4f3f4' : '#f4f3f4'}
+          ios_backgroundColor="#3e3e3e"
+          onValueChange={toggleSwitch}
+          value={isEnabled}
+        />
+      </View>
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   container: {

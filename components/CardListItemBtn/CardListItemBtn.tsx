@@ -19,7 +19,7 @@ if (
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-const CardListItemBtn = ({ title }: ICardListItemBtn) => {
+const CardListItemBtn = React.memo(({ title }: ICardListItemBtn) => {
   const [correct, setCorrect] = useState(0);
   const index = useSelector(selectIndex);
   const allWords = useSelector(selectAllWord);
@@ -65,7 +65,7 @@ const CardListItemBtn = ({ title }: ICardListItemBtn) => {
       </TouchableOpacity>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {
