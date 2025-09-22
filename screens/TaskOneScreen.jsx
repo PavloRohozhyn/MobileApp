@@ -4,6 +4,7 @@ import { selectAllWord } from './../redux/word/selectors';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import CardTitle from '../components/CardTitle/CardTitle';
 import CardListItemBtn from '../components/CardListItemBtn/CardListItemBtn';
+import NotFound from '../components/NotFound/NotFound';
 
 const TaskOneScreen = ({ navigation }) => {
   const data = useSelector(selectAllWord);
@@ -15,7 +16,11 @@ const TaskOneScreen = ({ navigation }) => {
   return (
     <View style={styles.screenContainer}>
       <CardTitle
-        title={words && words.length > 0 ? words[0].word : 'Red'}
+        title={
+          words && words.length > 0
+            ? words[0].word
+            : 'Тут може бути ваша реклама'
+        }
         position={true}
       />
       <Pressable onPress={pressHandler}>
@@ -24,7 +29,7 @@ const TaskOneScreen = ({ navigation }) => {
       {words && words.length > 0 ? (
         words.map((el, idx) => <CardListItemBtn key={idx} title={el.trans} />)
       ) : (
-        <Text style={styles.noData}>Нажаль немає слів</Text>
+        <NotFound />
       )}
     </View>
   );

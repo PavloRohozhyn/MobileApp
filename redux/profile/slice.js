@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getHomeData } from './operations';
+import { getProfileData } from './operations';
 
 /**
  * Handle rejected
@@ -11,22 +11,22 @@ const handleRejected = (state, action) => {
 };
 
 /**
- * Home Slice
+ * Profile Slice
  */
-const homeSlice = createSlice({
-  name: 'home',
+const profileSlice = createSlice({
+  name: 'Profile',
   initialState: {
     data: [],
     error: null,
   },
   extraReducers: builder => {
     builder
-      .addCase(getHomeData.fulfilled, (state, action) => {
+      .addCase(getProfileData.fulfilled, (state, action) => {
         state.error = null;
         state.data = action.payload;
       })
-      .addCase(getHomeData.rejected, handleRejected);
+      .addCase(getProfileData.rejected, handleRejected);
   },
 });
 
-export const homeReducer = homeSlice.reducer;
+export const profileReducer = profileSlice.reducer;

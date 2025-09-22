@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectData } from './../redux/home/selectors';
 import { getHomeData } from './../redux/home/operations';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import CardForPreview from '../components/CardForPreview/CardForPreview';
+import NotFound from '../components/NotFound/NotFound';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ const HomeScreen = () => {
           </View>
         ))
       ) : (
-        <Text style={styles.noData}>Нажаль технічні негаразди</Text>
+        <NotFound />
       )}
     </View>
   );
@@ -38,9 +39,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 20,
     paddingHorizontal: '5%',
-  },
-  noData: {
-    textAlign: 'center',
   },
 });
 

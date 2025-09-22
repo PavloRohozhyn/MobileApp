@@ -3,6 +3,7 @@ import { selectAllWord } from './../redux/word/selectors';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import CardTitle from '../components/CardTitle/CardTitle';
 import CardListItemBtn from '../components/CardListItemBtn/CardListItemBtn';
+import NotFound from '../components/NotFound/NotFound';
 
 const TaskTwoScreen = ({ navigation }) => {
   const words = useSelector(selectAllWord);
@@ -21,7 +22,7 @@ const TaskTwoScreen = ({ navigation }) => {
       {words && words.length > 0 ? (
         words.map((el, idx) => <CardListItemBtn key={idx} title={el.word} />)
       ) : (
-        <Text style={styles.noData}>Нажаль немає слів</Text>
+        <NotFound />
       )}
     </View>
   );

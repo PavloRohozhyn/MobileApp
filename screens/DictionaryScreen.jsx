@@ -1,15 +1,13 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { dictionaryList } from './../redux/dictionary/operations';
 import { setSelectedDictionaryId } from './../redux/dictionary/slice';
-
-import { View, Text, Pressable, StyleSheet } from 'react-native';
-import { useSelector } from 'react-redux';
+import { View, Pressable, StyleSheet } from 'react-native';
 import { selectAllDictionary } from './../redux/dictionary/selectors';
-
 import CardTitle from '../components/CardTitle/CardTitle';
 import Separator from '../components/Separator/Separator';
 import CardListItemIcon from '../components/CardListItemIcon/CardListItemIcon';
+import NotFound from '../components/NotFound/NotFound';
 
 const DictionaryScreen = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -35,7 +33,7 @@ const DictionaryScreen = ({ navigation }) => {
           </Pressable>
         ))
       ) : (
-        <Text style={styles.noData}>Нажаль немає словників</Text>
+        <NotFound />
       )}
     </View>
   );
@@ -47,9 +45,6 @@ const styles = StyleSheet.create({
     paddingTop: 100,
     gap: 20,
     paddingHorizontal: '5%',
-  },
-  noData: {
-    textAlign: 'center',
   },
 });
 
