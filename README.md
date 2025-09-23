@@ -76,6 +76,14 @@
 :paperclip: Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_final_project">cross_final_project</a><br />
 :paperclip: <a href="https://vimeo.com/1121125212">Live Demo</a></br />
 </br />
+<ul>
+ <li>added api calls for profile screen</li>
+ <li>added api cals for statistic screen</li>
+ <li>rewrite home screen from simple function to redux</li>
+ <li>added second step for learn</li>
+ <li>added "shuffle words functionale" for fisrst and second steps</li>
+ <li>fix bugs</li>
+</ul>
 </br />
 
 
