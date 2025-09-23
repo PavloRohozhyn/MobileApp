@@ -1,13 +1,20 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectAllWord } from './../redux/word/selectors';
+import {
+  selectWords,
+  selectShuffleWords,
+  selectIndex,
+} from './../redux/word/selectors';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import CardTitle from '../components/CardTitle/CardTitle';
 import CardListItemBtn from '../components/CardListItemBtn/CardListItemBtn';
+import NotFound from '../components/NotFound/NotFound';
 
 const TaskOneScreen = ({ navigation }) => {
-  const data = useSelector(selectAllWord);
-  const words = data && data.map(a => ({ ...a }));
+  const index = useSelector(selectIndex);
+  const words = useSelector(selectWords);
+  const shuffleWords = useSelector(selectShuffleWords);
+
   const pressHandler = () => {
     navigation.navigate('TaskTwoScreen');
   };
@@ -15,16 +22,22 @@ const TaskOneScreen = ({ navigation }) => {
   return (
     <View style={styles.screenContainer}>
       <CardTitle
-        title={words && words.length > 0 ? words[0].word : 'Red'}
+        title={
+          words && words.length > 0
+            ? words[index].word
+            : 'Тут може бути ваша реклама'
+        }
         position={true}
       />
       <Pressable onPress={pressHandler}>
         <Text style={styles.cardLink}>Наступне Тренування</Text>
       </Pressable>
-      {words && words.length > 0 ? (
-        words.map((el, idx) => <CardListItemBtn key={idx} title={el.trans} />)
+      {shuffleWords && shuffleWords.length > 0 ? (
+        shuffleWords.map((el, idx) => (
+          <CardListItemBtn key={idx} title={el.trans} step={1} />
+        ))
       ) : (
-        <Text style={styles.noData}>Нажаль немає слів</Text>
+        <NotFound />
       )}
     </View>
   );

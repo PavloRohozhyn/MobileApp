@@ -4,9 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { wordList } from './../redux/word/operations';
 import {
   selectSelectedDictionaryId,
-  selectAllWord,
+  selectSelectedDictionaryName,
+  selectShuffleWords,
 } from './../redux/word/selectors';
-
 import CardTitle from '../components/CardTitle/CardTitle';
 import Separator from '../components/Separator/Separator';
 import CardListItem from '../components/CardListItem/CardListItem';
@@ -14,21 +14,22 @@ import CardListItem from '../components/CardListItem/CardListItem';
 const WordScreen = ({ navigation }) => {
   // Get dictionary id
   const dictId = useSelector(selectSelectedDictionaryId);
+  const dictName = useSelector(selectSelectedDictionaryName);
+  // console.log('dictionary', dictName);
   // get all words (function runs in redux)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(wordList(dictId));
   }, [dispatch]);
   // get functions result from redux
-  const words = useSelector(selectAllWord);
-
+  const words = useSelector(selectShuffleWords);
   const pressHandler1 = () => {
     navigation.navigate('TaskOneScreen');
   };
 
   return (
     <View style={styles.screenContainer}>
-      <CardTitle title="Colors" position={false} />
+      <CardTitle title={dictName} position={false} />
       <Separator />
       <Pressable onPress={pressHandler1}>
         <Text style={styles.cardLink}>Тренувати</Text>

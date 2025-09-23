@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { selectIndex, selectAllWord } from './../../redux/word/selectors';
+import { useSelector, useDispatch } from 'react-redux';
+import { indexIncrement, shuffle } from './../../redux/word/slice';
+import { selectIndex, selectWords } from './../../redux/word/selectors';
 import {
   UIManager,
   Platform,
@@ -19,22 +20,35 @@ if (
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-const CardListItemBtn = React.memo(({ title }: ICardListItemBtn) => {
+const CardListItemBtn = React.memo(({ title, step }: ICardListItemBtn) => {
   const [correct, setCorrect] = useState(0);
-  const index = useSelector(selectIndex);
-  const allWords = useSelector(selectAllWord);
+  const dispatch = useDispatch();
+  const index = useSelector(selectIndex); // just for check
+  const words = useSelector(selectWords); // just for check
 
   const handlePress = () => {
     LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
-    // console.log('component', title);
-    // console.log('component', allWords);
-    if (allWords[index].trans == title) {
-      setCorrect(1);
+
+    // check step
+    let flag = false;
+    if (step === 1 && words[index].trans == title) {
+      // En -> Ukr
+      flag = true;
+    } else if (step === 2 && words[index].word == title) {
+      // Ukr -> En
+      flag = true;
     } else {
-      setCorrect(2);
+    }
+
+    if (flag) {
+      setCorrect(1); // green
+      dispatch(indexIncrement()); // next word
+      dispatch(shuffle());
+    } else {
+      setCorrect(2); // red
     }
     setTimeout(() => {
-      setCorrect(0); // reset to default
+      setCorrect(0); // reset to default (white)
     }, 1000);
   };
 
