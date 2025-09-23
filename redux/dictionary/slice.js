@@ -20,13 +20,13 @@ const dictionarySlice = createSlice({
   },
   reducers: {
     setSelectedDictionaryId: (state, action) => {
-      console.log('state', state.data[0]);
+      // console.log('state', state.data[0]);
       state.selectedDictionaryId = action.payload;
     },
     setSelectedDictionaryName: (state, action) => {
-      console.log('payload', action.payload);
+      // console.log('payload', action.payload);
       const res = state.data.find(el => el.id === action.payload);
-      console.log('func', res);
+      // console.log('func', res);
       state.selectedDictionaryName = res.title;
     },
   },

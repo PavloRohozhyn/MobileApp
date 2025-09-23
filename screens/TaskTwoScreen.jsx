@@ -16,7 +16,7 @@ const TaskOneScreen = ({ navigation }) => {
   const shuffleWords = useSelector(selectShuffleWords);
 
   const pressHandler = () => {
-    navigation.navigate('TaskDone');
+    navigation.navigate('TaskDoneScreen');
   };
 
   return (

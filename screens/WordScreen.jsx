@@ -15,7 +15,7 @@ const WordScreen = ({ navigation }) => {
   // Get dictionary id
   const dictId = useSelector(selectSelectedDictionaryId);
   const dictName = useSelector(selectSelectedDictionaryName);
-  console.log('dictionary', dictName);
+  // console.log('dictionary', dictName);
   // get all words (function runs in redux)
   const dispatch = useDispatch();
   useEffect(() => {
