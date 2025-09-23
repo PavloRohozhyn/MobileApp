@@ -71,10 +71,10 @@
 ### Cross Assigment Final
 
 > Final Task
-> <img src="./readme/cross_assignment_final/main.png" width="200" height="130" align="right"/>
+> <img src="./readme/cross_assignment_final/main.png" width="130" height="130" align="right"/>
 <br />
 :paperclip: Source branch <a href="https://github.com/PavloRohozhyn/MobileApp/tree/cross_final_project">cross_final_project</a><br />
-:paperclip: <a href="https://vimeo.com/1120810364">Live Demo</a></br />
+:paperclip: <a href="https://vimeo.com/1121125212">Live Demo</a></br />
 </br />
 </br />
 
