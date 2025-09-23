@@ -15,11 +15,19 @@ const dictionarySlice = createSlice({
   initialState: {
     data: [],
     selectedDictionaryId: null,
+    selectedDictionaryName: null,
     error: null,
   },
   reducers: {
     setSelectedDictionaryId: (state, action) => {
+      console.log('state', state.data[0]);
       state.selectedDictionaryId = action.payload;
+    },
+    setSelectedDictionaryName: (state, action) => {
+      console.log('payload', action.payload);
+      const res = state.data.find(el => el.id === action.payload);
+      console.log('func', res);
+      state.selectedDictionaryName = res.title;
     },
   },
   extraReducers: builder => {
@@ -32,5 +40,6 @@ const dictionarySlice = createSlice({
   },
 });
 
-export const { setSelectedDictionaryId } = dictionarySlice.actions;
+export const { setSelectedDictionaryId, setSelectedDictionaryName } =
+  dictionarySlice.actions;
 export const dictionaryReducer = dictionarySlice.reducer;

@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { dictionaryList } from './../redux/dictionary/operations';
-import { setSelectedDictionaryId } from './../redux/dictionary/slice';
+import {
+  setSelectedDictionaryId,
+  setSelectedDictionaryName,
+} from './../redux/dictionary/slice';
 import { View, Pressable, StyleSheet } from 'react-native';
 import { selectAllDictionary } from './../redux/dictionary/selectors';
 import CardTitle from '../components/CardTitle/CardTitle';
@@ -17,6 +20,7 @@ const DictionaryScreen = ({ navigation }) => {
 
   function handleDictionaryClick(dictId) {
     dispatch(setSelectedDictionaryId(dictId));
+    dispatch(setSelectedDictionaryName(dictId));
     navigation.navigate('Word');
   }
 
